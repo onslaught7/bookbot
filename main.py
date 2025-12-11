@@ -1,7 +1,8 @@
-def get_book_text(file_path: str) -> str:
-    with open(file_path, 'r') as f:
-        return f.read()
+from stats import get_book_text, get_count
+
 
 if __name__ == "__main__":
-    book_text = get_book_text('books/frankenstein.txt')
-    print(book_text)
+    book_text = get_book_text('books/frankenstein.txt').split()
+    word_count = len(book_text)
+
+    print(f"Found {word_count} total words")
