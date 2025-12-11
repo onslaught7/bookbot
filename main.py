@@ -1,8 +1,8 @@
-from stats import get_book_text, get_count
+from stats import get_book_text, get_char_count
 
 
 if __name__ == "__main__":
-    book_text = get_book_text('books/frankenstein.txt').split()
-    word_count = len(book_text)
+    book_text = get_book_text('books/frankenstein.txt')
+    char_count = get_char_count(book_text)
 
-    print(f"Found {word_count} total words")
+    print(char_count)
