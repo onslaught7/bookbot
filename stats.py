@@ -9,7 +9,7 @@ def get_count(text: str) -> int:
     return len(words_list)
 
 
-def get_char_count(text: str) -> str:
+def get_char_count(text: str) -> dict:
     text = text.lower()
     char_count = {}
 
@@ -20,3 +20,10 @@ def get_char_count(text: str) -> str:
             char_count[char] = 1
 
     return char_count
+
+
+def get_sorted_char_dict(char_count: dict) -> list:
+    char_count_list = list(char_count.items())
+    char_count_list.sort(key=lambda x: x[1], reverse=True)
+
+    return char_count_list
